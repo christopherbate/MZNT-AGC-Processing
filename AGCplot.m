@@ -32,7 +32,7 @@ try
     rfagc = bitand(regs(:,5),hex2dec('0F'));
     fclose(fid);
 
-    L1 = regs(1:4:end,6).*2.779+1.984;
+    L1 = regs(1:4:end,6);
     L2 = regs(4:4:end,6);
     GLO_L1 = regs(2:4:end,6);
     GLO_L2 = regs(3:4:end,6);
