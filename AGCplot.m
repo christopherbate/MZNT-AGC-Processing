@@ -32,7 +32,7 @@ try
     rfagc = bitand(regs(:,5),hex2dec('0F'));
     fclose(fid);
 
-    L1 = regs(1:4:end,6);
+    L1 = regs(1:4:end,6).*2.779+1.984;
     L2 = regs(4:4:end,6);
     GLO_L1 = regs(2:4:end,6);
     GLO_L2 = regs(3:4:end,6);
@@ -50,9 +50,12 @@ try
     dt_L2 = datetime(times_L1,'ConvertFrom','posixtime');
     dt_G1 = datetime(times_G1,'ConvertFrom','posixtime');
     dt_G2 = datetime(times_G2,'ConvertFrom','posixtime');
-
+    
     pltStart1 = 1;
     numPlot = length(L1)-15;
+    if numPlot > 100
+        pltStart1 = 100;
+    end
 
     subplot(4,1,1);
 
