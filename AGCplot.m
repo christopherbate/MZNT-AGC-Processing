@@ -109,7 +109,7 @@ try
     %hold on;
     %plot(dt_G1(pltStart1:numPlot),rf_GLO_L1(pltStart1:numPlot), 'linewidth', 2);
     %hold off;
-    title(['GPS L1, Avg: ',num2str(mean(GLO_L1)),', Mode: ',num2str(mode(GLO_L1)),...
+    title(['GLO L1, Avg: ',num2str(mean(GLO_L1)),', Mode: ',num2str(mode(GLO_L1)),...
         ', Min: ',num2str(min(GLO_L1))]);
     ylabel('Levels');
     %xlabel('Time');
@@ -125,7 +125,7 @@ try
 %     hold on;
 %     plot(dt_G2(pltStart1:numPlot),rf_GLO_L2(pltStart1:numPlot), 'linewidth', 2);
 %     hold off;
-    title(['GPS L1, Avg: ',num2str(mean(GLO_L2)),', Mode: ',num2str(mode(GLO_L2)),...
+    title(['GLO L2, Avg: ',num2str(mean(GLO_L2)),', Mode: ',num2str(mode(GLO_L2)),...
         ', Min: ',num2str(min(GLO_L2))]);
     ylabel('Levels');
     xlabel('Time');
