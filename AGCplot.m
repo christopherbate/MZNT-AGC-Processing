@@ -57,12 +57,12 @@ try
     dt_G2 = datetime(times_G2,'ConvertFrom','posixtime','TimeZone',timezone);
     
     pltStart1 = 1;
-    numPlot = length(L1)-15;
+    numPlot = length(L1);
     if numPlot > 100
         pltStart1 = 100;
     end
 
-    xlimits = [min(dt_G2) max(dt_G2)];
+    xlimits = [min(dt_L1(pltStart1:numPlot)) max(dt_L1(pltStart1:numPlot))];
     
     position = [0.1 0.7 0.8 0.2];
     subplot('Position',position);
